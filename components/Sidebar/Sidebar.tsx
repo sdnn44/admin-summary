@@ -1,5 +1,5 @@
 "use client";
-import { sidebarItems } from '../../utils/sidebar-items.js';
+import { sidebarItems } from '../../app/utils/sidebar-items.js';
 import { RiCrosshair2Fill } from "react-icons/ri";
 type Props = {}
 
