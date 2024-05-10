@@ -4,7 +4,7 @@ import { DataTable } from './data-table'
 import { columns } from './columns'
 import { db } from '../utils/firebase';
 import { child, get, ref } from "firebase/database";
-import { BanType } from '../types/Ban';
+import { BanType } from '../types/BanType';
 
 // const fetchDataFromFirebase = async () => {
 //     try {

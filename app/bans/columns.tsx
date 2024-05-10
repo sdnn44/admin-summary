@@ -10,7 +10,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { BanType } from "../types/Ban"
+import { BanType } from "../types/BanType"
 
 export const columns: ColumnDef<BanType>[] = [
   {
