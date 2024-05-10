@@ -4,8 +4,7 @@ import { DataTable } from './data-table'
 import { columns } from './columns'
 import { db } from '../utils/firebase';
 import { child, get, ref } from "firebase/database";
-import { useParams } from 'next/navigation';
-import { Ban } from '@/types/Ban';
+import { BanType } from '../types/Ban';
 
 // const fetchDataFromFirebase = async () => {
 //     try {
@@ -26,7 +25,7 @@ import { Ban } from '@/types/Ban';
 // };
 
 export default function Page() {
-    const [adminData, setAdminData] = useState<Ban[]>([]);
+    const [adminData, setAdminData] = useState<BanType[]>([]);
     // const [bannedUsers, setBannedUsers] = useState<any[]>([]);
 
     useEffect(() => {
@@ -34,7 +33,7 @@ export default function Page() {
         get(adminRef).then((snapshot) => {
             if (snapshot.exists()) {
                 // console.log(snapshot.val())
-                const adminObject: Record<string, Ban> = snapshot.val();
+                const adminObject: Record<string, BanType> = snapshot.val();
                 const adminArray = Object.entries(adminObject).map(([id, data]) =>  ({
                     id,
                     ...data,

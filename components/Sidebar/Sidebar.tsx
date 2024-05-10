@@ -5,8 +5,8 @@ type Props = {}
 
 export default function Sidebar({ }: Props) {
     return (
-        <div className="h-screen w-16 bg-[#38373e] flex flex-col">
-            <div className='bg-[#7047F9] w-16 h-16 text-white flex items-center justify-center'><RiCrosshair2Fill size={36} /></div>
+        <div className="h-screen w-16 bg-[#020817] flex flex-col border-r-2">
+            {/* <div className='bg-[#7047F9] w-16 h-16 text-white flex items-center justify-center'><RiCrosshair2Fill size={36} /></div> */}
             <div className='flex justify-center items-center h-full'>
                 <ul className='nav-items flex flex-col gap-16'>
                     {sidebarItems.map((item) => {

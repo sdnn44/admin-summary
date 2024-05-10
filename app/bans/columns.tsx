@@ -1,6 +1,4 @@
 "use client"
-
-import { Ban } from "@/types/Ban"
 import { ColumnDef } from "@tanstack/react-table"
 import { ArrowUpDown, MoreHorizontal } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -12,8 +10,9 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { BanType } from "../types/Ban"
 
-export const columns: ColumnDef<Ban>[] = [
+export const columns: ColumnDef<BanType>[] = [
   {
     accessorKey: "Nick",
     header: ({ column }) => {

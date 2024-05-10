@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function ProfileCard() {
     return (
-        <div className='rounded-xl bg-gradient-to-r from-purple-500 to-purple-900 w-96 h-72 flex flex-col gap-5 p-4 relative overflow-hidden'>
+        <div className='rounded-xl bg-gradient-to-r from-slate-700 to-slate-950 w-96 h-72 flex flex-col gap-5 p-4 relative overflow-hidden'>
             <div className='flex items-center'>
                 <h1 className='text-7xl font-bold'>5</h1><span className='m-1 text-2xl'>demek</span>
             </div>

@@ -1,14 +1,14 @@
 "use client";
 import { columns } from '@/app/bans/columns';
 import { DataTable } from '@/app/bans/data-table';
+import { BanType } from '@/app/types/Ban';
 import { db } from '@/app/utils/firebase';
-import { Ban } from '@/types/Ban';
 import { get, ref } from 'firebase/database';
 import React, { useEffect, useState } from 'react'
 
 export default function Table() {
 
-    const [adminData, setAdminData] = useState<Ban[]>([]);
+    const [adminData, setAdminData] = useState<BanType[]>([]);
     // const [bannedUsers, setBannedUsers] = useState<any[]>([]);
 
     useEffect(() => {
@@ -16,7 +16,7 @@ export default function Table() {
         get(adminRef).then((snapshot) => {
             if (snapshot.exists()) {
                 // console.log(snapshot.val())
-                const adminObject: Record<string, Ban> = snapshot.val();
+                const adminObject: Record<string, BanType> = snapshot.val();
                 const adminArray = Object.entries(adminObject).map(([id, data]) => ({
                     id,
                     ...data,
