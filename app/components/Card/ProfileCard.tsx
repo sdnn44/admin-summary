@@ -10,7 +10,7 @@ export default function ProfileCard() {
     useEffect(() => {
         numberOfBans = getNumberOfAdminBans();
     }, [admin]);
-    console.log(numberOfBans);
+    // console.log(numberOfBans);
     return (
         <div className='rounded-xl bg-gradient-to-r from-slate-700 to-slate-950 w-96 h-72 flex flex-col gap-5 p-4 relative overflow-hidden'>
             <div className='flex items-center'>

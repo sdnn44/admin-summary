@@ -6,8 +6,10 @@ import { AdminType } from "../types/AdminType";
 interface GlobalContextProps {
     admin: BanType[];
     admins: BanType[];
+    setAdminNickname: (value: string) => void;
     getNumberOfAdminBans: () => number;
     isLoading: boolean;
+    setIsLoading: (value: boolean) => void;
 }
 
 interface GlobalUpdateContextProps {
@@ -29,7 +31,7 @@ export function GlobalProvider({ children }: { children: ReactNode }): JSX.Eleme
             const res = await axios.get("/api/admins");
             setAdmins(res.data);
             setIsLoading(false);
-            console.log(res.data);
+            // console.log(res.data);
         } catch (error) {
             // toast.error("Proba pobrania adminow nie powiodla sie.");
             console.log(error);
@@ -51,6 +53,14 @@ export function GlobalProvider({ children }: { children: ReactNode }): JSX.Eleme
         return admin.length;
     }
 
+    const getNumberOfGivenDemos = () => {
+
+    }
+
+    const getNumberOfGivenScreenshots = () => {
+
+    }
+
     useEffect(() => {
         getAllAdmins();
     }, []);
@@ -59,8 +69,10 @@ export function GlobalProvider({ children }: { children: ReactNode }): JSX.Eleme
         <GlobalContext.Provider value={{
             admin,
             admins,
+            setAdminNickname,
             getNumberOfAdminBans,
-            isLoading
+            isLoading,
+            setIsLoading
         }}>
             <GlobalUpdateContext.Provider value={{ getSpecificAdmin }}>
                 {children}

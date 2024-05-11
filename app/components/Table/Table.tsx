@@ -35,11 +35,11 @@ export default function Table() {
     //     })
     // }, []);
     useEffect(() => {
-        getSpecificAdmin('Przyjaciel');
+        // getSpecificAdmin('Przyjaciel');
     }, []);
-    console.log(admin);
+    // console.log(admin);
     const numberOfBans = getNumberOfAdminBans();
-    console.log(numberOfBans);
+    // console.log(numberOfBans);
 
     return (
         <section className='py-24'>
