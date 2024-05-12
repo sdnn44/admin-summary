@@ -1,16 +1,17 @@
 import React from 'react'
 import Image from 'next/image';
-import { AdminProps } from '@/app/utils/admins-data';
 import { useGlobalState, useGlobalUpdate } from '@/app/context/globalContextProvider';
+import { AdminType } from '@/app/types/AdminType';
+import { BanType } from '@/app/types/BanType';
 
 interface Prop {
-    admin: AdminProps;
+    admin: AdminType;
     index: number;
 }
 
 function StreamerCard({ admin, index }: Prop) {
 
-    const { setAdminNickname, setIsLoading } = useGlobalState();
+    const { setSearchedAdmin, setIsLoading } = useGlobalState();
     const { getSpecificAdmin } = useGlobalUpdate();
 
     return (
@@ -20,7 +21,7 @@ function StreamerCard({ admin, index }: Prop) {
                 // setGameId(game.game_id);
                 // setStreamerId(streamer.id);
                 getSpecificAdmin(admin.nickname);
-                setAdminNickname(admin.nickname);
+                setSearchedAdmin(admin);
                 setIsLoading(true);
             }
             }>

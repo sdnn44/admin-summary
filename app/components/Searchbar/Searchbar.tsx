@@ -1,5 +1,5 @@
 "use client"
-import adminData, { AdminProps } from '@/app/utils/admins-data';
+import adminData from '@/app/utils/admins-data';
 import { AnimatePresence, motion } from 'framer-motion'
 import { ChangeEvent, useEffect, useRef, useState } from 'react'
 import { useClickOutside } from 'react-click-outside-hook';
@@ -8,6 +8,7 @@ import { IoCloseOutline } from "react-icons/io5";
 import AdminCard from '../Card/AdminCard';
 import { useDebounce } from '@/app/hooks/debounceHook';
 import Loader from '../Loader/Loader';
+import { AdminType } from '@/app/types/AdminType';
 
 
 type Props = {}
@@ -22,7 +23,7 @@ export default function Searchbar({ }: Props) {
 
     const [isLoadingAdmin, setIsLoadingAdmin] = useState<boolean>(true);
 
-    const [adminList, setAdminList] = useState<AdminProps[]>([]);
+    const [adminList, setAdminList] = useState<AdminType[]>([]);
     const [noAdmins, setNoAdmins] = useState(false);
 
     const isEmpty = !adminList || adminList.length === 0;
@@ -90,7 +91,7 @@ export default function Searchbar({ }: Props) {
                 </span>
                 <input
                     className="w-full outline-none border-none text-sm font-light text-white rounded-2xl bg-transparent placeholder-white placeholder:opacity-50 focus:placeholder-transparent focus:outline-none"
-                    placeholder="Search for Admin..."
+                    placeholder="Wyszukaj admina..."
                     ref={inputRef}
                     value={searchQuery}
                     onChange={changeHandler}
@@ -117,7 +118,7 @@ export default function Searchbar({ }: Props) {
                 {isLoadingAdmin && isExpanded && (<Loader />)}
                 {!isLoadingAdmin && isEmpty && !noAdmins && <span className='flex h-full justify-center items-center text-sm opacity-60'>Start typing to search</span>}
                 {!isLoadingAdmin && noAdmins && <span className='flex h-full justify-center items-center text-sm opacity-60'>No Admin found!</span>}
-                {!isLoadingAdmin && !isEmpty && adminList.map((item: AdminProps, index: number) => (
+                {!isLoadingAdmin && !isEmpty && adminList.map((item: AdminType, index: number) => (
                     <AdminCard key={item.id} admin={item} index={index} />
                 ))}
             </div>

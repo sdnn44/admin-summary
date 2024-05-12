@@ -1,7 +1,7 @@
-import { BanType } from "./BanType";
-
 export type AdminType = {
     id: number;
-    nick: string;
-    content: BanType[];
+    img: string,
+    nickname: string;
+    steamURL: string;
+    status: string;
 }

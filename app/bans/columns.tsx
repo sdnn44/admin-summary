@@ -32,11 +32,11 @@ export const columns: ColumnDef<BanType>[] = [
     header: "SteamID",
   },
   {
-    accessorKey: "Powód Bana",
+    accessorKey: "Reason",
     header: "Powód",
   },
   {
-    accessorKey: "Wykonano",
+    accessorKey: "Date",
     header: "Data wykoniania",
   },
   {

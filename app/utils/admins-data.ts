@@ -1,24 +1,18 @@
-export interface AdminProps {
-    id: number;
-    img: string,
-    nickname: string;
-    steamURL: string;
-    status: string;
-}
+import { AdminType } from "../types/AdminType";
 
-const adminData: AdminProps[] = [
+const adminData: AdminType[] = [
     {
         id: 0,
-        img: "https://avatars.akamai.steamstatic.com/47ae0f623791bf25b3154b26d1443f9ad3604f32_full.jpg",
+        img: "https://avatars.akamai.steamstatic.com/b639b74de1928eab19f0f1e73a52b8d4f79f293d_full.jpg",
         nickname: "Axel",
-        steamURL: "https://steamcommunity.com/profiles/76561197967118341",
+        steamURL: "https://steamcommunity.com/profiles/76561198812271357",
         status: "UBT Member",
     },
     {
         id: 1,
-        img: "https://avatars.akamai.steamstatic.com/47ae0f623791bf25b3154b26d1443f9ad3604f32_full.jpg",
+        img: "https://avatars.akamai.steamstatic.com/865138202e78620360d77f19686d0430c07da617_full.jpg",
         nickname: "BOA DUPCZYCIEL KOBIETA=MAX60KG",
-        steamURL: "https://steamcommunity.com/profiles/76561197967118341",
+        steamURL: "https://steamcommunity.com/profiles/76561199226175828",
         status: "Admin",
     },
     {
@@ -30,11 +24,103 @@ const adminData: AdminProps[] = [
     },
     {
         id: 3,
-        img: "https://avatars.akamai.steamstatic.com/47ae0f623791bf25b3154b26d1443f9ad3604f32_full.jpg",
+        img: "https://avatars.akamai.steamstatic.com/7458b35d40ebe9bd93659e9f034c6b243a25fd83_full.jpg",
         nickname: "FunnyPuma ^^",
-        steamURL: "https://steamcommunity.com/profiles/76561197967118341",
+        steamURL: "https://steamcommunity.com/id/Puma557",
+        status: "Admin",
+    },
+    {
+        id: 4,
+        img: "https://avatars.akamai.steamstatic.com/1bbaf3aeb0106b415d921777f4523071e6c58e10_full.jpg",
+        nickname: "HTH-Pigula",
+        steamURL: "https://steamcommunity.com/profiles/76561198894162103",
+        status: "Admin",
+    },
+    {
+        id: 5,
+        img: "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/2598440/5bdec92696b30d8b1a7dd8e00e1af4ec4ddc9013.gif",
+        nickname: "Janiu",
+        steamURL: "https://steamcommunity.com/id/Janiu1996",
+        status: "Admin",
+    },
+    {
+        id: 6,
+        img: "https://avatars.akamai.steamstatic.com/a233a4bb27fdf48b42548892a2bb3fbb3e2d2f4a_full.jpg",
+        nickname: "Janusz HD",
+        steamURL: "https://steamcommunity.com/id/dzbanxdd",
+        status: "UBT Member",
+    },
+    {
+        id: 7,
+        img: "https://avatars.akamai.steamstatic.com/68ab375d158e6324464e90d5a63368eb1bee0fea_full.jpg",
+        nickname: "Komornik",
+        steamURL: "https://steamcommunity.com/profiles/76561199002782846",
+        status: "Admin",
+    },
+    {
+        id: 8,
+        img: "https://avatars.akamai.steamstatic.com/9656dea98a4c2175883b8d436db80b84b17c615c_full.jpg",
+        nickname: "Krip",
+        steamURL: "https://steamcommunity.com/id/Kripowski",
+        status: "UBT Member & Admin",
+    },
+    {
+        id: 9,
+        img: "https://avatars.akamai.steamstatic.com/4d6d0030485fdf671ab1a5c0082b210d2aeac731_full.jpg",
+        nickname: "KrÃ³lNastolatek",
+        steamURL: "https://steamcommunity.com/profiles/76561199589580357",
+        status: "Admin",
+    },
+    {
+        id: 10,
+        img: "https://avatars.akamai.steamstatic.com/167ae4646f967457b4125d23d01656f00d2380bc_full.jpg",
+        nickname: "Nie umiem w te kÄ…kutery",
+        steamURL: "https://steamcommunity.com/id/haxcode",
+        status: "UBT Member",
+    },
+    {
+        id: 11,
+        img: "https://avatars.akamai.steamstatic.com/893e906054307feccfb548781c481b197e975be6_full.jpg",
+        nickname: "Przyjaciel",
+        steamURL: "https://steamcommunity.com/id/Broke7331",
+        status: "UBT Member",
+    },
+    {
+        id: 12,
+        img: "https://strefaskilla.pl/uploads/monthly_2024_04/logo.webp.69af8a08aaac6dd3e5fa52dcb9752eef.webp",
+        nickname: "StrefaSkilla",
+        steamURL: "brak",
+        status: "Plugin",
+    },
+    {
+        id: 13,
+        img: "https://avatars.akamai.steamstatic.com/5bbdc329a56d386ed89704550694824197058d24_full.jpg",
+        nickname: "paczajonovicz",
+        steamURL: "https://steamcommunity.com/id/hajtemjezdem",
+        status: "Admin",
+    },
+    {
+        id: 14,
+        img: "https://avatars.akamai.steamstatic.com/f5ba78b30fca4bd66d89f3a5f2e86c9c832be7ee_full.jpg",
+        nickname: "rewka ÏÎ¹Æ’Æ’ ÏÎ±",
+        steamURL: "https://steamcommunity.com/profiles/76561199093614005",
+        status: "Admin",
+    },
+    {
+        id: 15,
+        img: "https://avatars.akamai.steamstatic.com/432d924958d8fac5e4bbf81de952020568faa8e3_full.jpg",
+        nickname: "smOrf",
+        steamURL: "https://steamcommunity.com/id/smOrfeh",
+        status: "Admin",
+    },
+    {
+        id: 16,
+        img: "https://avatars.akamai.steamstatic.com/f8ac3280cec0e77573aa6ed736a5b40c2db69ce0_full.jpg",
+        nickname: "aXe",
+        steamURL: "https://steamcommunity.com/id/Vicente241982",
         status: "Admin",
     },
 ];
 
 export default adminData;
+

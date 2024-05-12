@@ -6,8 +6,12 @@ import { AdminType } from "../types/AdminType";
 interface GlobalContextProps {
     admin: BanType[];
     admins: BanType[];
+    searchedAdmin?: AdminType;
+    setSearchedAdmin: (value: AdminType) => void;
     setAdminNickname: (value: string) => void;
     getNumberOfAdminBans: () => number;
+    getNumberOfGivenDemos: () => number;
+    getNumberOfGivenScreenshots: () => number;
     isLoading: boolean;
     setIsLoading: (value: boolean) => void;
 }
@@ -22,6 +26,7 @@ export const GlobalUpdateContext = createContext<GlobalUpdateContextProps>({} as
 export function GlobalProvider({ children }: { children: ReactNode }): JSX.Element {
     const [admin, setAdmin] = useState<BanType[]>([]);
     const [admins, setAdmins] = useState<BanType[]>([]);
+    const [searchedAdmin, setSearchedAdmin] = useState<AdminType>();
     const [adminNickname, setAdminNickname] = useState<string>('Axel');
     const [isLoading, setIsLoading] = useState<boolean>(false);
 
@@ -43,7 +48,6 @@ export function GlobalProvider({ children }: { children: ReactNode }): JSX.Eleme
             const res = await axios.get(`/api/admins/${nickname}`);
             setAdmin(res.data);
             setIsLoading(false);
-            console.log(res.data);
         } catch (error) {
             // toast.error("Proba pobrania adminow nie powiodla sie.");
             console.log(error);
@@ -54,11 +58,19 @@ export function GlobalProvider({ children }: { children: ReactNode }): JSX.Eleme
     }
 
     const getNumberOfGivenDemos = () => {
-
+        let numberOfGivenDemos = admin.filter((ban: BanType) => {
+            const reasonLower = ban.Reason ? ban.Reason.toLowerCase() : "";
+            return reasonLower.includes("demko") || reasonLower.includes("pov");
+        }).length;
+        return numberOfGivenDemos;
     }
 
     const getNumberOfGivenScreenshots = () => {
-
+        let numberOfGivenScreenshots = admin.filter((ban: BanType) => {
+            const reasonLower = ban.Reason ? ban.Reason.toLowerCase() : "";
+            return reasonLower.includes("wstaw_screeny") || reasonLower.includes("screenshooty");
+        }).length;
+        return numberOfGivenScreenshots;
     }
 
     useEffect(() => {
@@ -69,8 +81,12 @@ export function GlobalProvider({ children }: { children: ReactNode }): JSX.Eleme
         <GlobalContext.Provider value={{
             admin,
             admins,
+            searchedAdmin,
+            setSearchedAdmin,
             setAdminNickname,
             getNumberOfAdminBans,
+            getNumberOfGivenDemos,
+            getNumberOfGivenScreenshots,
             isLoading,
             setIsLoading
         }}>
