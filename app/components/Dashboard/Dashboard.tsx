@@ -16,7 +16,7 @@ export default function Dashboard({ }: Props) {
       {searchedAdmin ? (
         isLoading ? <div className='h-full w-full justify-center items-center'><Loader /></div> :
           <>
-            <div className='flex flex-row w-full h-1/3'>
+            <div className='flex flex-row w-full h-1/3 gap-3'>
               <BanCard />
               <ProfileCard />
             </div>

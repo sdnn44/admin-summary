@@ -60,7 +60,7 @@ export function GlobalProvider({ children }: { children: ReactNode }): JSX.Eleme
     const getNumberOfGivenDemos = () => {
         let numberOfGivenDemos = admin.filter((ban: BanType) => {
             const reasonLower = ban.Reason ? ban.Reason.toLowerCase() : "";
-            return reasonLower.includes("demko") || reasonLower.includes("pov");
+            return reasonLower.includes("demko") || reasonLower.includes("demo") || reasonLower.includes("pov");
         }).length;
         return numberOfGivenDemos;
     }
