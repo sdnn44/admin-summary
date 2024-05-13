@@ -2,9 +2,11 @@ import React, { createContext, ReactNode, useContext, useEffect, useState } from
 import axios from "axios";
 import { BanType } from "../types/BanType";
 import { AdminType } from "../types/AdminType";
+import { PlaytimeType } from "../types/PlaytimeType";
 
 interface GlobalContextProps {
     admin: BanType[];
+    adminPlaytime: PlaytimeType[];
     admins: BanType[];
     searchedAdmin?: AdminType;
     setSearchedAdmin: (value: AdminType) => void;
@@ -18,6 +20,7 @@ interface GlobalContextProps {
 
 interface GlobalUpdateContextProps {
     getSpecificAdmin: (adminName: string) => Promise<void>;
+    getSpecificAdminPlaytime: (adminName: string) => Promise<void>;
 }
 
 export const GlobalContext = createContext<GlobalContextProps>({} as GlobalContextProps)
@@ -25,6 +28,7 @@ export const GlobalUpdateContext = createContext<GlobalUpdateContextProps>({} as
 
 export function GlobalProvider({ children }: { children: ReactNode }): JSX.Element {
     const [admin, setAdmin] = useState<BanType[]>([]);
+    const [adminPlaytime, setAdminPlaytime] = useState<PlaytimeType[]>([]);
     const [admins, setAdmins] = useState<BanType[]>([]);
     const [searchedAdmin, setSearchedAdmin] = useState<AdminType>();
     const [adminNickname, setAdminNickname] = useState<string>('Axel');
@@ -47,6 +51,17 @@ export function GlobalProvider({ children }: { children: ReactNode }): JSX.Eleme
         try {
             const res = await axios.get(`/api/admins/${nickname}`);
             setAdmin(res.data);
+            setIsLoading(false);
+        } catch (error) {
+            // toast.error("Proba pobrania adminow nie powiodla sie.");
+            console.log(error);
+        }
+    }
+    const getSpecificAdminPlaytime = async (nickname: string) => {
+        setIsLoading(true);
+        try {
+            const res = await axios.get(`/api/playtimes/${nickname}`);
+            setAdminPlaytime(res.data);
             setIsLoading(false);
         } catch (error) {
             // toast.error("Proba pobrania adminow nie powiodla sie.");
@@ -80,6 +95,7 @@ export function GlobalProvider({ children }: { children: ReactNode }): JSX.Eleme
     return (
         <GlobalContext.Provider value={{
             admin,
+            adminPlaytime,
             admins,
             searchedAdmin,
             setSearchedAdmin,
@@ -90,7 +106,7 @@ export function GlobalProvider({ children }: { children: ReactNode }): JSX.Eleme
             isLoading,
             setIsLoading
         }}>
-            <GlobalUpdateContext.Provider value={{ getSpecificAdmin }}>
+            <GlobalUpdateContext.Provider value={{ getSpecificAdmin, getSpecificAdminPlaytime }}>
                 {children}
             </GlobalUpdateContext.Provider>
         </GlobalContext.Provider>

@@ -1,5 +1,4 @@
-export type Data = {
-    [date: string]: {
-        playtime: number;
-    };
+export type PlaytimeType = {
+    id: string;
+    playtime: number;
 }

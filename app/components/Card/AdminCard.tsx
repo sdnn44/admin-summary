@@ -12,7 +12,7 @@ interface Prop {
 function StreamerCard({ admin, index }: Prop) {
 
     const { setSearchedAdmin, setIsLoading } = useGlobalState();
-    const { getSpecificAdmin } = useGlobalUpdate();
+    const { getSpecificAdmin, getSpecificAdminPlaytime } = useGlobalUpdate();
 
     return (
         <div
@@ -21,6 +21,7 @@ function StreamerCard({ admin, index }: Prop) {
                 // setGameId(game.game_id);
                 // setStreamerId(streamer.id);
                 getSpecificAdmin(admin.nickname);
+                getSpecificAdminPlaytime(admin.nickname);
                 setSearchedAdmin(admin);
                 setIsLoading(true);
             }
