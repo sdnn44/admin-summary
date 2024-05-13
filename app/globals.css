@@ -97,3 +97,16 @@
         transform: rotate(360deg);
     }
     } 
+
+    @keyframes moveUpDown {
+      0%, 100% {
+        transform: translate(30px, 30px);
+      }
+      50% {
+        transform: translate(0, 0);
+      }
+    }
+    
+    .moving-svg {
+      animation: moveUpDown 2s 5 alternate;
+    }

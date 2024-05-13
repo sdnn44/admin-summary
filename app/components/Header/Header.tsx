@@ -10,8 +10,8 @@ export default function Header({ }: Props) {
 
   return (
     <div className='flex flex-row bg-[#020817] border-b-2 h-16'>
-      <div className='flex justify-between mx-5 gap-10 w-full'>
-        <p className='text-xl font-bold text-white self-center tracking-widest'>ADMIN DASHBOARD</p>
+      <div className='flex justify-between w-full'>
+        <p className='mx-10 text-xl font-bold text-white self-center tracking-widest'><span className="text-[#8884d8]">ADMIN</span> DASHBOARD</p>
         <div className='flex justify-between gap-16 p-3'>
           <Searchbar />
           {searchedAdmin && <ProfileStatus user={searchedAdmin}/>}

@@ -7,6 +7,8 @@ const adminData: AdminType[] = [
         nickname: "Axel",
         steamURL: "https://steamcommunity.com/profiles/76561198812271357",
         status: "UBT Member",
+        csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:1:426002814",
+        strefaskillaURL: "https://strefaskilla.pl/profile/19788-axel/",
     },
     {
         id: 1,
@@ -14,6 +16,8 @@ const adminData: AdminType[] = [
         nickname: "BOA DUPCZYCIEL KOBIETA=MAX60KG",
         steamURL: "https://steamcommunity.com/profiles/76561199226175828",
         status: "Admin",
+        csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:0:632955050",
+        strefaskillaURL: "https://strefaskilla.pl/profile/6960-boa-dupczyciel/",
     },
     {
         id: 2,
@@ -21,6 +25,8 @@ const adminData: AdminType[] = [
         nickname: "BÅ‚aszczyk",
         steamURL: "https://steamcommunity.com/profiles/76561197967118341",
         status: "Admin",
+        csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:1:3426306",
+        strefaskillaURL: "https://strefaskilla.pl/profile/15410-b%C5%82aszczyk/",
     },
     {
         id: 3,
@@ -28,6 +34,8 @@ const adminData: AdminType[] = [
         nickname: "FunnyPuma ^^",
         steamURL: "https://steamcommunity.com/id/Puma557",
         status: "Admin",
+        csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:0:168372848",
+        strefaskillaURL: "https://strefaskilla.pl/profile/19770-funnypuma/",
     },
     {
         id: 4,
@@ -35,6 +43,8 @@ const adminData: AdminType[] = [
         nickname: "HTH-Pigula",
         steamURL: "https://steamcommunity.com/profiles/76561198894162103",
         status: "Admin",
+        csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:1:466948187",
+        strefaskillaURL: "https://strefaskilla.pl/profile/15825-hth-pigula/",
     },
     {
         id: 5,
@@ -42,6 +52,8 @@ const adminData: AdminType[] = [
         nickname: "Janiu",
         steamURL: "https://steamcommunity.com/id/Janiu1996",
         status: "Admin",
+        csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:0:543497531",
+        strefaskillaURL: "https://strefaskilla.pl/profile/23638-janiu/",
     },
     {
         id: 6,
@@ -49,6 +61,8 @@ const adminData: AdminType[] = [
         nickname: "Janusz HD",
         steamURL: "https://steamcommunity.com/id/dzbanxdd",
         status: "UBT Member",
+        csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:1:531633419",
+        strefaskillaURL: "https://strefaskilla.pl/profile/11340-januszhd/",
     },
     {
         id: 7,
@@ -56,6 +70,8 @@ const adminData: AdminType[] = [
         nickname: "Komornik",
         steamURL: "https://steamcommunity.com/profiles/76561199002782846",
         status: "Admin",
+        csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:0:521258559",
+        strefaskillaURL: "https://strefaskilla.pl/profile/15523-komornik123/",
     },
     {
         id: 8,
@@ -63,6 +79,8 @@ const adminData: AdminType[] = [
         nickname: "Krip",
         steamURL: "https://steamcommunity.com/id/Kripowski",
         status: "UBT Member & Admin",
+        csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:0:621242502",
+        strefaskillaURL: "https://strefaskilla.pl/profile/15741-krip/",
     },
     {
         id: 9,
@@ -70,6 +88,8 @@ const adminData: AdminType[] = [
         nickname: "KrÃ³lNastolatek",
         steamURL: "https://steamcommunity.com/profiles/76561199589580357",
         status: "Admin",
+        csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:1:814657314",
+        strefaskillaURL: "https://strefaskilla.pl/profile/23730-kr%C3%B3lnastolatek/",
     },
     {
         id: 10,
@@ -77,6 +97,8 @@ const adminData: AdminType[] = [
         nickname: "Nie umiem w te kÄ…kutery",
         steamURL: "https://steamcommunity.com/id/haxcode",
         status: "UBT Member",
+        csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:0:457522528",
+        strefaskillaURL: "https://strefaskilla.pl/profile/11161-nie-umiem-w-te-k%C4%85kutery/",
     },
     {
         id: 11,
@@ -84,13 +106,17 @@ const adminData: AdminType[] = [
         nickname: "Przyjaciel",
         steamURL: "https://steamcommunity.com/id/Broke7331",
         status: "UBT Member",
+        csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:1:554421267",
+        strefaskillaURL: "https://strefaskilla.pl/profile/6851-przyjaciel/",
     },
     {
         id: 12,
         img: "https://strefaskilla.pl/uploads/monthly_2024_04/logo.webp.69af8a08aaac6dd3e5fa52dcb9752eef.webp",
         nickname: "StrefaSkilla",
-        steamURL: "brak",
+        steamURL: "-",
         status: "Plugin",
+        csarchiveURL: "https://i.imgur.com/ZHQKtAu.png",
+        strefaskillaURL: "https://i.imgur.com/ZHQKtAu.png",
     },
     {
         id: 13,
@@ -98,6 +124,8 @@ const adminData: AdminType[] = [
         nickname: "paczajonovicz",
         steamURL: "https://steamcommunity.com/id/hajtemjezdem",
         status: "Admin",
+        csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:0:6470931",
+        strefaskillaURL: "https://strefaskilla.pl/profile/15575-paczajonovicz/",
     },
     {
         id: 14,
@@ -105,6 +133,8 @@ const adminData: AdminType[] = [
         nickname: "rewka ÏÎ¹Æ’Æ’ ÏÎ±",
         steamURL: "https://steamcommunity.com/profiles/76561199093614005",
         status: "Admin",
+        csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:1:566674138",
+        strefaskillaURL: "https://strefaskilla.pl/profile/18216-rewka/",
     },
     {
         id: 15,
@@ -112,6 +142,8 @@ const adminData: AdminType[] = [
         nickname: "smOrf",
         steamURL: "https://steamcommunity.com/id/smOrfeh",
         status: "Admin",
+        csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:1:4065483",
+        strefaskillaURL: "https://strefaskilla.pl/profile/20650-smorf/",
     },
     {
         id: 16,
@@ -119,6 +151,8 @@ const adminData: AdminType[] = [
         nickname: "aXe",
         steamURL: "https://steamcommunity.com/id/Vicente241982",
         status: "Admin",
+        csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:1:633437643",
+        strefaskillaURL: "https://strefaskilla.pl/profile/24549-axeee/",
     },
 ];
 

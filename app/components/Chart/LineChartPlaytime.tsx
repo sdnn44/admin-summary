@@ -1,62 +1,59 @@
 import React from 'react'
 import {
     LineChart,
-    MarkPlot,
     lineElementClasses,
-    markElementClasses,
 } from '@mui/x-charts/LineChart';
 import { axisClasses } from '@mui/x-charts/ChartsAxis';
 
 import dayjs from 'dayjs';
-
-interface Data {
-    [date: string]: {
-        playtime: number;
-    };
-}
+import { Data } from '@/app/types/PlaytimeType';
 
 const data: Data = {
     "01-05-2024": {
+        "playtime": 7
+    },
+    "02-05-2024": {
+        "playtime": 9
+    },
+    "03-05-2024": {
+        "playtime": 35
+    },
+    "04-05-2024": {
         "playtime": 0
-      },
-      "02-05-2024": {
+    },
+    "05-05-2024": {
         "playtime": 0
-      },
-      "03-05-2024": {
+    },
+    "06-05-2024": {
         "playtime": 0
-      },
-      "04-05-2024": {
-        "playtime": 635
-      },
-      "05-05-2024": {
-        "playtime": 990
-      },
-      "06-05-2024": {
-        "playtime": 1324
-      },
-      "07-05-2024": {
-        "playtime": 1250
-      },
-      "08-05-2024": {
-        "playtime": 545
-      },
-      "09-05-2024": {
+    },
+    "07-05-2024": {
         "playtime": 0
-      },
-      "10-05-2024": {
+    },
+    "08-05-2024": {
         "playtime": 0
-      },
-      "11-05-2024": {
+    },
+    "09-05-2024": {
         "playtime": 0
-      },
-      "12-05-2024": {
+    },
+    "10-05-2024": {
         "playtime": 0
-      },
-      "13-05-2024": {
+    },
+    "11-05-2024": {
         "playtime": 0
-      }
+    },
+    "12-05-2024": {
+        "playtime": 0
+    },
+    "13-05-2024": {
+        "playtime": 0
+    }
 };
-
+const emptySeries = {
+    series: [],
+    margin: { top: 10, right: 10, left: 25, bottom: 25 },
+    height: 150,
+};
 const dates = Object.keys(data).map(dateString => {
     const [day, month, year] = dateString.split("-");
     return new Date(`${year}-${month}-${day}`);
