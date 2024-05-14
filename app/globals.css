@@ -72,10 +72,21 @@
       @apply bg-background text-foreground;
     }
   }
-  
-  body {
-    /* color: lightgray; */
-    /* background: #0c0c1d; */
+
+  /* Chrome, Edge, and Safari */
+  body::-webkit-scrollbar, .scrollbar-style::-webkit-scrollbar {
+    width: 7px;
+    height: 5px;
+  }
+
+  body::-webkit-scrollbar-track {
+    background: #0F1117;
+  }
+
+  body::-webkit-scrollbar-thumb, .scrollbar-style::-webkit-scrollbar-thumb {
+    background-color: #8884d8 ;
+    border-radius: 0px;
+    border: 3px none #ffffff;
   }
 
   .loader {

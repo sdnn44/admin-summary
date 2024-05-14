@@ -113,7 +113,7 @@ export default function Searchbar({ }: Props) {
                 </AnimatePresence>
             </div>
             {isExpanded && (<span className="flex min-w-full min-h-[2px] bg-slate-500" />)}
-            {isExpanded && (<div className="flex flex-col h-full w-full overflow-hidden overflow-y-auto">
+            {isExpanded && (<div className="flex flex-col h-full w-full overflow-hidden overflow-y-auto scrollbar-style">
                 {/* <div className="flex border-2 w-full h-full items-center justify-center"> */}
                 {isLoadingAdmin && isExpanded && (<Loader />)}
                 {!isLoadingAdmin && isEmpty && !noAdmins && <span className='flex h-full justify-center items-center text-sm opacity-60'>Start typing to search</span>}
