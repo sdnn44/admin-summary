@@ -5,22 +5,23 @@ import ProfileCard from '@/app/components/Card/ProfileCard';
 import BanCard from '@/app/components/Card/BanCard';
 import { PlaytimeType } from '@/app/types/PlaytimeType';
 import { BanType } from '@/app/types/BanType';
+import axios from 'axios';
 
 async function getAdminData(adminNickname: string) {
-    const res = await fetch(`http://localhost:3000/api/admins/${adminNickname}`);
-    return res.json();
+    const res = await axios.get(`http://localhost:3000/api/admins/${adminNickname}`);
+    return res.data;
 }
 
 async function getAdminPlaytime(adminNickname: string) {
-    const res = await fetch(`http://localhost:3000/api/playtimes/${adminNickname}`);
-    return res.json();
+    const res = await axios.get(`http://localhost:3000/api/playtimes/${adminNickname}`);
+    return res.data;
 }
 
 export default async function AdminDetails({ params }: { params: { nickname: string } }) {
-    
+
     const adminData = await getAdminData(params.nickname);
     const adminPlaytime: PlaytimeType[] = await getAdminPlaytime(params.nickname);
-
+    console.log(adminPlaytime);
     const getNumberOfAdminBans = () => {
         return adminData.length;
     }
@@ -44,8 +45,8 @@ export default async function AdminDetails({ params }: { params: { nickname: str
     return (
         <div className='h-screen p-4'>
             <div className='flex flex-row w-full h-1/3 gap-3'>
-                <BanCard playtime={adminPlaytime} />
-                <ProfileCard numberOfGivenBans={getNumberOfAdminBans()} numberOfGivenDemos={getNumberOfGivenDemos()} numberOfGivenScreenshots={getNumberOfGivenScreenshots()}/>
+                <BanCard playtime={adminPlaytime} adminNickname={params.nickname}/>
+                <ProfileCard numberOfGivenBans={getNumberOfAdminBans()} numberOfGivenDemos={getNumberOfGivenDemos()} numberOfGivenScreenshots={getNumberOfGivenScreenshots()} />
             </div>
             <div className='w-full h-1/2'>
                 <section className='py-24'>
