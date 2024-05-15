@@ -1,0 +1,59 @@
+import React from 'react'
+import { DataTable } from '@/app/bans/data-table';
+import { columns } from '@/app/bans/columns';
+import ProfileCard from '@/app/components/Card/ProfileCard';
+import BanCard from '@/app/components/Card/BanCard';
+import { PlaytimeType } from '@/app/types/PlaytimeType';
+import { BanType } from '@/app/types/BanType';
+
+async function getAdminData(adminNickname: string) {
+    const res = await fetch(`http://localhost:3000/api/admins/${adminNickname}`);
+    return res.json();
+}
+
+async function getAdminPlaytime(adminNickname: string) {
+    const res = await fetch(`http://localhost:3000/api/playtimes/${adminNickname}`);
+    return res.json();
+}
+
+export default async function AdminDetails({ params }: { params: { nickname: string } }) {
+    
+    const adminData = await getAdminData(params.nickname);
+    const adminPlaytime: PlaytimeType[] = await getAdminPlaytime(params.nickname);
+
+    const getNumberOfAdminBans = () => {
+        return adminData.length;
+    }
+
+    const getNumberOfGivenDemos = () => {
+        let numberOfGivenDemos = adminData.filter((ban: BanType) => {
+            const reasonLower = ban.Reason ? ban.Reason.toLowerCase() : "";
+            return reasonLower.includes("demko") || reasonLower.includes("demo") || reasonLower.includes("pov");
+        }).length;
+        return numberOfGivenDemos;
+    }
+
+    const getNumberOfGivenScreenshots = () => {
+        let numberOfGivenScreenshots = adminData.filter((ban: BanType) => {
+            const reasonLower = ban.Reason ? ban.Reason.toLowerCase() : "";
+            return reasonLower.includes("wstaw_screeny") || reasonLower.includes("screenshooty");
+        }).length;
+        return numberOfGivenScreenshots;
+    }
+
+    return (
+        <div className='h-screen p-4'>
+            <div className='flex flex-row w-full h-1/3 gap-3'>
+                <BanCard playtime={adminPlaytime} />
+                <ProfileCard numberOfGivenBans={getNumberOfAdminBans()} numberOfGivenDemos={getNumberOfGivenDemos()} numberOfGivenScreenshots={getNumberOfGivenScreenshots()}/>
+            </div>
+            <div className='w-full h-1/2'>
+                <section className='py-24'>
+                    <div className='container'>
+                        <DataTable columns={columns} data={adminData} />
+                    </div>
+                </section>
+            </div>
+        </div>
+    )
+}

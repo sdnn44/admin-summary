@@ -22,7 +22,7 @@ const adminData: AdminType[] = [
     {
         id: 2,
         img: "https://avatars.akamai.steamstatic.com/47ae0f623791bf25b3154b26d1443f9ad3604f32_full.jpg",
-        nickname: "BÅ‚aszczyk",
+        nickname: "Blaszczyk",
         steamURL: "https://steamcommunity.com/profiles/76561197967118341",
         status: "Admin",
         csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:1:3426306",
@@ -85,7 +85,7 @@ const adminData: AdminType[] = [
     {
         id: 9,
         img: "https://avatars.akamai.steamstatic.com/4d6d0030485fdf671ab1a5c0082b210d2aeac731_full.jpg",
-        nickname: "KrÃ³lNastolatek",
+        nickname: "KrolNastolatek",
         steamURL: "https://steamcommunity.com/profiles/76561199589580357",
         status: "Admin",
         csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:1:814657314",

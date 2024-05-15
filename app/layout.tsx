@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import "./globals.css";
 import ContextProvider from "./providers/ContextProvider";
@@ -24,6 +25,7 @@ export default function RootLayout({
           <GlobalStyleProvider>
             <Sidebar />
             <div className="w-full">
+              <Header />
               {children}
             </div>
           </GlobalStyleProvider>

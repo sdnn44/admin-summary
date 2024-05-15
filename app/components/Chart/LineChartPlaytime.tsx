@@ -1,3 +1,4 @@
+"use client";
 import React from 'react'
 import {
     LineChart,
@@ -6,26 +7,18 @@ import {
 import { axisClasses } from '@mui/x-charts/ChartsAxis';
 
 import dayjs from 'dayjs';
-import { useGlobalState } from '@/app/context/globalContextProvider';
+import { PlaytimeType } from '@/app/types/PlaytimeType';
 
 const valueFormatter = (value: number | null) => `${value} min`;
 
-const LineChartPlaytime = () => {
-    
-    const { adminPlaytime } = useGlobalState();
-
-    console.log(adminPlaytime);
+const LineChartPlaytime = ({ adminPlaytime }: { adminPlaytime: PlaytimeType[] }) => {
 
     const dates = adminPlaytime.map(item => {
         const [day, month, year] = item.id.split("-");
         return new Date(`${year}-${month}-${day}`);
     });
-    
-    console.log(dates);
 
     const playtimes = adminPlaytime.map(entry => entry.playtime);
-
-    console.log(playtimes);
 
     return (
         <LineChart
@@ -66,7 +59,7 @@ const LineChartPlaytime = () => {
                     stroke: '#8884d8',
                     strokeWidth: 2,
                 },
-                [`.MuiChartsTooltip-root`]:{
+                [`.MuiChartsTooltip-root`]: {
                     bgcolor: '#000',
                     color: '#d14153'
                 },
