@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import "./globals.css";
 import ContextProvider from "./providers/ContextProvider";
 import GlobalStyleProvider from "./providers/GlobalStyleProvider";
+import NextTopLoader from "nextjs-toploader";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,11 +22,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        <NextTopLoader
+          height={5}
+          color="navy"
+          easing='cubic-bezier(0.53, 0.21, 0, 1)'
+        />
         <ContextProvider>
           <GlobalStyleProvider>
             <Sidebar />
             <div className="w-full">
               <Header />
+
               {children}
             </div>
           </GlobalStyleProvider>
