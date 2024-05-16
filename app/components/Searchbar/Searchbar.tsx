@@ -84,7 +84,7 @@ export default function Searchbar({ }: Props) {
                 setNoAdmins(false);
             }}
             ref={parentRef}
-            className="flex flex-col lg:w-[26rem] sm:w-full h-10 bg-[#0F1117ee] rounded-lg shadow-sm shadow-slate-500 z-20">
+            className="hidden md:flex md:flex-col lg:w-[26rem] sm:w-full h-10 bg-[#0F1117ee] rounded-lg shadow-sm shadow-slate-500 z-20">
             <div className="w-full min-h-10 flex items-center px-4">
                 <span className="text-white align-middle mr-5 cursor-pointer">
                     <CiSearch size={20} />

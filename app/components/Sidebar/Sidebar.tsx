@@ -9,7 +9,7 @@ type Props = {}
 
 export default function Sidebar({ }: Props) {
     return (
-        <div className="w-40 bg-[#020817] flex flex-col border-r-2">
+        <div className="w-40 bg-[#020817] hidden md:flex flex-col border-r-2">
             <div className='flex items-center h-full flex-col gap-5 my-20'>
                 <AnimatedTooltip items={adminData} />
             </div>

@@ -43,13 +43,13 @@ export default async function AdminDetails({ params }: { params: { nickname: str
     }
 
     return (
-        <div className='h-screen p-4'>
-            <div className='flex flex-row w-full h-1/3 gap-3'>
+        <div className='md:h-screen p-4 md:flex md:flex-col'>
+            <div className='flex flex-col md:flex-row w-full md:h-1/3 gap-6 md:gap-3'>
                 <BanCard playtime={adminPlaytime} adminNickname={params.nickname}/>
                 <ProfileCard numberOfGivenBans={getNumberOfAdminBans()} numberOfGivenDemos={getNumberOfGivenDemos()} numberOfGivenScreenshots={getNumberOfGivenScreenshots()} />
             </div>
             <div className='w-full h-1/2'>
-                <section className='py-24'>
+                <section className='py-4 md:py-24'>
                     <div className='container'>
                         <DataTable columns={columns} data={adminData} />
                     </div>
