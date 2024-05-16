@@ -42,7 +42,7 @@ export const AnimatedTooltip = ({
     x.set(event.nativeEvent.offsetX - halfWidth); // set the x value, which is then used in transform and rotate
   };
 
-  const { setSearchedAdmin, setIsLoading } = useGlobalState();
+  const { setSearchedAdmin, collapseMenu, setIsLoading } = useGlobalState();
 
   const router = useRouter();
 
@@ -60,6 +60,7 @@ export const AnimatedTooltip = ({
             // getSpecificAdminPlaytime(admin.nickname);
             setSearchedAdmin(item);
             setIsLoading(true);
+            collapseMenu();
           }}
         >
           {hoveredIndex === item.id && (

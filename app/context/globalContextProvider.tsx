@@ -16,6 +16,8 @@ interface GlobalContextProps {
     getNumberOfGivenScreenshots: () => number;
     isLoading: boolean;
     setIsLoading: (value: boolean) => void;
+    collapsed: boolean;
+    collapseMenu: () => void;
 }
 
 interface GlobalUpdateContextProps {
@@ -33,6 +35,7 @@ export function GlobalProvider({ children }: { children: ReactNode }): JSX.Eleme
     const [searchedAdmin, setSearchedAdmin] = useState<AdminType>();
     const [adminNickname, setAdminNickname] = useState<string>('Axel');
     const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [collapsed, setCollapsed] = useState<boolean>(true);
 
     const getAllAdmins = async () => {
         setIsLoading(true);
@@ -88,6 +91,10 @@ export function GlobalProvider({ children }: { children: ReactNode }): JSX.Eleme
         return numberOfGivenScreenshots;
     }
 
+    const collapseMenu = () => {
+        setCollapsed(!collapsed);
+    };
+
     useEffect(() => {
         getAllAdmins();
     }, []);
@@ -104,7 +111,9 @@ export function GlobalProvider({ children }: { children: ReactNode }): JSX.Eleme
             getNumberOfGivenDemos,
             getNumberOfGivenScreenshots,
             isLoading,
-            setIsLoading
+            setIsLoading,
+            collapsed,
+            collapseMenu
         }}>
             <GlobalUpdateContext.Provider value={{ getSpecificAdmin, getSpecificAdminPlaytime }}>
                 {children}
