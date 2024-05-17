@@ -12,7 +12,7 @@ interface Prop {
 function AdminCard({ admin, index }: Prop) {
 
     const router = useRouter();
-    const { setSearchedAdmin, setIsLoading } = useGlobalState();
+    const { setSearchedAdmin, setIsLoading, collapseMenu } = useGlobalState();
 
     return (
         <div
@@ -23,6 +23,7 @@ function AdminCard({ admin, index }: Prop) {
                 // getSpecificAdminPlaytime(admin.nickname);
                 setSearchedAdmin(admin);
                 setIsLoading(true);
+                collapseMenu();
             }
             }>
             <Image src={admin.img} width={50} height={50} className="flex rounded-full" alt={''} />

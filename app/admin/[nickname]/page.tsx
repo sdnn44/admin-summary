@@ -8,13 +8,13 @@ import { BanType } from '@/app/types/BanType';
 import axios from 'axios';
 
 async function getAdminData(adminNickname: string) {
-    const res = await fetch(`http://strefaskilla-helper.vercel.app/api/admins/${adminNickname}`);
-    return res.json();
+    const res = await axios.get(`http://strefaskilla-helper.vercel.app/api/admins/${adminNickname}`);
+    return res.data;
 }
 
 async function getAdminPlaytime(adminNickname: string) {
-    const res = await fetch(`http://strefaskilla-helper.vercel.app/api/playtimes/${adminNickname}`);
-    return res.json();
+    const res = await axios.get(`http://strefaskilla-helper.vercel.app/api/playtimes/${adminNickname}`);
+    return res.data;
 }
 
 export default async function AdminDetails({ params }: { params: { nickname: string } }) {
