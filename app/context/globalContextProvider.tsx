@@ -35,7 +35,7 @@ export function GlobalProvider({ children }: { children: ReactNode }): JSX.Eleme
     const [searchedAdmin, setSearchedAdmin] = useState<AdminType>();
     const [adminNickname, setAdminNickname] = useState<string>('Axel');
     const [isLoading, setIsLoading] = useState<boolean>(false);
-    const [collapsed, setCollapsed] = useState<boolean>(true);
+    const [collapsed, setCollapsed] = useState<boolean>(false);
 
     const getAllAdmins = async () => {
         setIsLoading(true);
