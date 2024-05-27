@@ -161,7 +161,7 @@ const adminData: AdminType[] = [
         steamURL: "https://steamcommunity.com/id/lou93psz",
         status: "Admin",
         csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:0:25275745",
-        strefaskillaURL: "https://strefaskilla.pl/profile/24549-axeee/",
+        strefaskillaURL: "https://strefaskilla.pl/profile/24465-lou/",
     },
     {
         id: 18,
@@ -169,7 +169,7 @@ const adminData: AdminType[] = [
         nickname: "czerwonkaaa",
         steamURL: "https://steamcommunity.com/profiles/76561199245969027/",
         status: "Admin",
-        csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:0:642851649",
+        csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:1:642851649",
         strefaskillaURL: "https://strefaskilla.pl/profile/22542-czerwonka/",
     },
 ];
