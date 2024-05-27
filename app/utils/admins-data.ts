@@ -24,7 +24,7 @@ const adminData: AdminType[] = [
         img: "https://avatars.akamai.steamstatic.com/47ae0f623791bf25b3154b26d1443f9ad3604f32_full.jpg",
         nickname: "Blaszczyk",
         steamURL: "https://steamcommunity.com/profiles/76561197967118341",
-        status: "Admin",
+        status: "Były admin",
         csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:1:3426306",
         strefaskillaURL: "https://strefaskilla.pl/profile/15410-b%C5%82aszczyk/",
     },
@@ -123,7 +123,7 @@ const adminData: AdminType[] = [
         img: "https://avatars.akamai.steamstatic.com/5bbdc329a56d386ed89704550694824197058d24_full.jpg",
         nickname: "paczajonovicz",
         steamURL: "https://steamcommunity.com/id/hajtemjezdem",
-        status: "Admin",
+        status: "Były admin",
         csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:0:6470931",
         strefaskillaURL: "https://strefaskilla.pl/profile/15575-paczajonovicz/",
     },
@@ -154,7 +154,24 @@ const adminData: AdminType[] = [
         csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:1:633437643",
         strefaskillaURL: "https://strefaskilla.pl/profile/24549-axeee/",
     },
+    {
+        id: 17,
+        img: "https://avatars.akamai.steamstatic.com/ff96f925a4520f8c693b286c949ffe6d8f94e834_full.jpg",
+        nickname: "lou`",
+        steamURL: "https://steamcommunity.com/id/lou93psz",
+        status: "Admin",
+        csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:0:25275745",
+        strefaskillaURL: "https://strefaskilla.pl/profile/24549-axeee/",
+    },
+    {
+        id: 18,
+        img: "https://avatars.akamai.steamstatic.com/305c9342d86fd924bfd2186f3a066acd6c78f652_full.jpg",
+        nickname: "czerwonkaaa",
+        steamURL: "https://steamcommunity.com/profiles/76561199245969027/",
+        status: "Admin",
+        csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:0:642851649",
+        strefaskillaURL: "https://strefaskilla.pl/profile/22542-czerwonka/",
+    },
 ];
-
 export default adminData;
 
