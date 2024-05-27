@@ -16,9 +16,9 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "strefaskilla.pl",
+        hostname: "imgur.com",
         port: "",
-        pathname: "/uploads/monthly_2024_04/**",
+        pathname: "**",
       },
     ],
   },

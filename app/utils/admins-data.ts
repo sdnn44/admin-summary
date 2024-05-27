@@ -111,7 +111,7 @@ const adminData: AdminType[] = [
     },
     {
         id: 12,
-        img: "https://strefaskilla.pl/uploads/monthly_2024_04/logo.webp.69af8a08aaac6dd3e5fa52dcb9752eef.webp",
+        img: "https://imgur.com/HNRkpYr.png",
         nickname: "StrefaSkilla",
         steamURL: "-",
         status: "Plugin",
