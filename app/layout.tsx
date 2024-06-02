@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <NextTopLoader
           height={5}
-          color="navy"
+          color="rgb(196 181 253)"
           easing='cubic-bezier(0.53, 0.21, 0, 1)'
         />
         <ContextProvider>
