@@ -66,7 +66,11 @@ export default async function AdminDetails({ params }: { params: { nickname: str
                     {PERIOD.map((option) => (
                         <Link
                             key={option.id}
-                            className={`flex w-24 justify-center text-sm font-bold rounded-xl p-1 px-3 mx-1 cursor-pointer border-2 border-violet-400 hover:bg-violet-300 transition duration-300 ease-in hover:text-violet-800`}
+                            className={`flex w-24 justify-center text-sm font-bold rounded-xl p-1 px-3 mx-1 cursor-pointer border-2 border-violet-400 hover:bg-violet-300 transition duration-300 ease-in hover:text-violet-800 ${option.periodLabel === params.period
+                                ? 'bg-violet-300 text-violet-800'
+                                : 'hover:bg-violet-300 hover:text-violet-800'
+                                }
+                            `}
                             href={`/admin/${option.periodLabel}/${params.nickname}`}
                         >
                             {option.periodLabel}
