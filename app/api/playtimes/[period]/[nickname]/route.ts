@@ -3,14 +3,14 @@ import { db } from '@/app/utils/firebase';
 import { get, ref } from 'firebase/database';
 import { BanType } from "@/app/types/BanType";
 
-export async function GET(req: Request, { params }: { params: { nickname: string } }) {
+export async function GET(req: Request, { params }: { params: { period: string; nickname: string } }) {
     try {
         // const { userId } = auth();
         // if (!userId)
         // return NextResponse.json({ error: "Unauthorized", status: 401 });
-        const { nickname } = params;
-
-        const adminRef = ref(db, `admins/playtime/${nickname}`);
+        const { nickname, period } = params;
+        console.log(nickname);
+        const adminRef = ref(db, `admins/playtime/${period}/${nickname}`);
         const adminSnapshot = await get(adminRef);
         if (adminSnapshot.exists()) {
             // const adminData = adminSnapshot.val();

@@ -26,6 +26,9 @@ export default function BanCard({ playtime, adminNickname }: { playtime: Playtim
           <LineChartPlaytime adminPlaytime={playtime} />
         </>
       }
+      {/* <div className='border-2 border-sky-500 w-16 h-16'>
+      
+      </div> */}
     </div>
   )
 }

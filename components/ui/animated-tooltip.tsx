@@ -55,7 +55,7 @@ export const AnimatedTooltip = ({
           onMouseEnter={() => setHoveredIndex(item.id)}
           onMouseLeave={() => setHoveredIndex(null)}
           onClick={() => {
-            router.push(`/admin/${encodeURIComponent(item.nickname)}`);
+            router.push(`/admin/czerwiec/${encodeURIComponent(item.nickname)}`);
             // getSpecificAdmin(admin.nickname);
             // getSpecificAdminPlaytime(admin.nickname);
             setSearchedAdmin(item);
