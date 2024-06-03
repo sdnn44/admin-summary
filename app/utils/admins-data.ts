@@ -181,6 +181,15 @@ const adminData: AdminType[] = [
         csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:0:727295603",
         strefaskillaURL: "https://strefaskilla.pl/profile/24475-kolejarz/",
     },
+    {
+        id: 20,
+        img: "https://avatars.akamai.steamstatic.com/e0c30c1d6d2916492bc82945f2871c1f6e4f0eed_full.jpg",
+        nickname: "sztuki walki",
+        steamURL: "https://steamcommunity.com/profiles/76561199068567276",
+        status: "Admin",
+        csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:0:554150774",
+        strefaskillaURL: "https://strefaskilla.pl/profile/20562-sztuki-walki/",
+    },
 ];
 export default adminData;
 
