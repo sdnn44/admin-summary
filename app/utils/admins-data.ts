@@ -193,7 +193,7 @@ const adminData: AdminType[] = [
     {
         id: 21,
         img: "https://avatars.akamai.steamstatic.com/e2e5edbbaa9faa5ce2c38ac2505341c9f6ae4b5f_full.jpg",
-        nickname: "h0w?! |",
+        nickname: "h0w",
         steamURL: "https://steamcommunity.com/profiles/76561198003059793/",
         status: "Admin",
         csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:1:21397032",
