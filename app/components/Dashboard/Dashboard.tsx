@@ -12,7 +12,7 @@ export default function Dashboard({ }: Props) {
   const { isLoading, searchedAdmin } = useGlobalState();
 
   return (
-    <div className='h-screen p-4'>
+    <div className='h-screen w-full p-4 lg:fixed lg:left-24'>
       {searchedAdmin ? (
         isLoading ? <div className='h-full w-full justify-center items-center'><Loader /></div> : <></>
       ) : (
