@@ -15,7 +15,7 @@ const adminData: AdminType[] = [
         img: "https://avatars.akamai.steamstatic.com/865138202e78620360d77f19686d0430c07da617_full.jpg",
         nickname: "BOA DUPCZYCIEL KOBIETA=MAX60KG",
         steamURL: "https://steamcommunity.com/profiles/76561199226175828",
-        status: "Admin",
+        status: "Były admin",
         csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:0:632955050",
         strefaskillaURL: "https://strefaskilla.pl/profile/6960-boa-dupczyciel/",
     },
