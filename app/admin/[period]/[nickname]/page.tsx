@@ -29,6 +29,10 @@ export default async function AdminDetails({ params }: { params: { nickname: str
         {
             id: 2,
             periodLabel: "czerwiec",
+        },
+        {
+            id: 3,
+            periodLabel: "lipiec",
         }
     ];
 
@@ -62,7 +66,7 @@ export default async function AdminDetails({ params }: { params: { nickname: str
                     <BanCard playtime={adminPlaytime} adminNickname={params.nickname} />
                     <ProfileCard numberOfGivenBans={getNumberOfAdminBans()} numberOfGivenDemos={getNumberOfGivenDemos()} numberOfGivenScreenshots={getNumberOfGivenScreenshots()} />
                 </div>
-                <div className='flex flex-row px-8 pt-2 z-50'>
+                <div className='flex flex-row px-8 pt-2 z-10'>
                     {PERIOD.map((option) => (
                         <Link
                             key={option.id}
