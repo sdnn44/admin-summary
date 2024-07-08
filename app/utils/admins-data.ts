@@ -78,7 +78,7 @@ const adminData: AdminType[] = [
         img: "https://avatars.akamai.steamstatic.com/9656dea98a4c2175883b8d436db80b84b17c615c_full.jpg",
         nickname: "Krip",
         steamURL: "https://steamcommunity.com/id/Kripowski",
-        status: "Członek UBT & Admin",
+        status: "Były admin",
         csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:0:621242502",
         strefaskillaURL: "https://strefaskilla.pl/profile/15741-krip/",
     },
@@ -199,7 +199,7 @@ const adminData: AdminType[] = [
         csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:1:21397032",
         strefaskillaURL: "https://strefaskilla.pl/profile/24514-h0w/",
     },
-        {
+    {
         id: 22,
         img: "https://avatars.akamai.steamstatic.com/3ce7fd0c1a5225790d67d90d4f1e60d2d29d2037_full.jpg",
         nickname: "PROSTO MISTRZ",
@@ -207,6 +207,15 @@ const adminData: AdminType[] = [
         status: "Admin",
         csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:1:60297899",
         strefaskillaURL: "https://strefaskilla.pl/profile/20265-prosto-mistrz/",
+    },
+    {
+        id: 23,
+        img: "https://avatars.akamai.steamstatic.com/141569c29168b2fdad21fd7436080c44b54fd669_full.jpg",
+        nickname: "Kocham Cie kwiatuszku <3",
+        steamURL: "https://steamcommunity.com/id/vovoakazabijaka",
+        status: "Admin",
+        csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:1:441550711",
+        strefaskillaURL: "https://strefaskilla.pl/profile/24622-kocham-cie-kwiatuszku/",
     },
 ];
 export default adminData;
