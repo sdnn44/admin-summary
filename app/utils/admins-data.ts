@@ -96,7 +96,7 @@ const adminData: AdminType[] = [
         img: "https://avatars.akamai.steamstatic.com/167ae4646f967457b4125d23d01656f00d2380bc_full.jpg",
         nickname: "Nie umiem w te kÄ…kutery",
         steamURL: "https://steamcommunity.com/id/haxcode",
-        status: "Członek UBT",
+        status: "Były admin",
         csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:0:457522528",
         strefaskillaURL: "https://strefaskilla.pl/profile/11161-nie-umiem-w-te-k%C4%85kutery/",
     },
@@ -216,6 +216,15 @@ const adminData: AdminType[] = [
         status: "Admin",
         csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:1:441550711",
         strefaskillaURL: "https://strefaskilla.pl/profile/24622-kocham-cie-kwiatuszku/",
+    },
+    {
+        id: 24,
+        img: "https://avatars.akamai.steamstatic.com/328a686da7e7ee577a0d2480b6f40fdf88beb90b_full.jpg",
+        nickname: "WIADRO",
+        steamURL: "https://steamcommunity.com/profiles/76561197970624764",
+        status: "Admin",
+        csarchiveURL: "https://cs-archive.vercel.app/sprawdz/STEAM_0:0:5179518",
+        strefaskillaURL: "https://strefaskilla.pl/profile/24492-%F0%9D%93%A6%F0%9D%93%98%F0%9D%93%90%F0%9D%93%93%F0%9D%93%A1%F0%9D%93%9E/",
     },
 ];
 export default adminData;
